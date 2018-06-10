@@ -32,7 +32,40 @@ export class Home extends React.Component {
         })
     }
 
+    componentWillMount() {
+        console.log("Component Will mount")
+    }
+
+    componentDidMount() {
+        console.log("Component Did mount")
+    }
+
+    componentWillReceiveProps(nextProps) {
+        console.log("Component Will Receive Props", nextProps)
+    }
+
+    shouldComponentUpdate(nextProps,nextStage) {
+        console.log("Should Component Update", nextProps,nextStage)
+        // if (nextState.status === 1 ){
+        //     return false
+        // }
+        return true;
+    }
+
+    componentWillUpdate(nextProps,nextStage) {
+        console.log("Component Will Update", nextProps,nextStage)
+    }
+
+    componentDidUpdate(previousProps,previousStage) {
+        console.log("Component Did Update", previousProps,previousStage)
+    }
+
+    componentDidUpdate(previousProps,previousStage) {
+        console.log("Component Did Update", previousProps,previousStage)
+    }
+
     render () {
+
         return (
             <div>
                 <h1>COMPONENT</h1>
